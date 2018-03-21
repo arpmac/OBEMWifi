@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OBEMWifi.iml" filepath="$PROJECT_DIR$/OBEMWifi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SETAM1_man_cmd/SETAM1_man_cmd.iml" filepath="$PROJECT_DIR$/SETAM1_man_cmd/SETAM1_man_cmd.iml" />
+    </modules>
+  </component>
+</project>

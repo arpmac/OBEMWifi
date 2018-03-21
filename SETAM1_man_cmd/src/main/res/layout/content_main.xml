@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ahmed.obemwifi.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:paddingLeft="@dimen/paddL">
+
+    <TableLayout
+        android:id="@+id/tl1"
+        android:layout_width="@dimen/state_statusW"
+        android:layout_height="@dimen/state_statusH"
+        android:layout_alignParentTop="false"
+        android:stretchColumns="*"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_marginLeft="5dp"
+                android:background="#71b1ff"
+                android:text="192.168.100.100"
+                android:textAlignment="center"
+                android:textColor="#ff372a"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_marginEnd="@dimen/paddR"
+                android:layout_weight="0.52"
+                android:onClick="on"
+                android:text="Connect"
+                android:textSize="@dimen/textSize" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tl2"
+        android:layout_width="@dimen/state_statusW"
+        android:layout_height="@dimen/state_statusH"
+        android:stretchColumns="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TableRow
+            android:id="@+id/rowl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_column="0"
+                android:text="Status"
+                style="@style/txtView1"/>
+
+            <TextView
+                android:id="@+id/etStatus"
+                style="@style/txtView2"
+                android:layout_column="1"
+                android:text="Automatic" />
+
+        </TableRow>
+
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/tl3"
+        android:layout_width="@dimen/state_statusW"
+        android:layout_height="@dimen/state_statusH"
+        android:stretchColumns="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl2"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TableRow
+            android:layout_width="585dp"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tvState"
+                android:layout_column="0"
+                android:text="State"
+                style="@style/txtView1"/>
+
+            <TextView
+                android:id="@+id/etState"
+                style="@style/txtView2"
+                android:layout_column="1"
+                android:text="Navetta carica OK per spostamento. Fine operazione prelievo" />
+        </TableRow>
+
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/tl4"
+        android:layout_width="@dimen/state_statusW"
+        android:layout_height="@dimen/state_statusH"
+        android:layout_alignParentTop="false"
+        android:stretchColumns="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl3"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TableRow
+            android:layout_width="585dp"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tvEncoder"
+                android:layout_column="0"
+                android:text="Encoder X"
+                style="@style/txtView1"/>
+
+            <TextView
+                android:id="@+id/etX"
+                android:layout_column="1"
+                android:text="0"
+                style="@style/txtView2"/>
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/tl5"
+        android:layout_width="@dimen/state_statusW"
+        android:layout_height="@dimen/state_statusH"
+        android:stretchColumns="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl4"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TableRow
+            android:layout_width="585dp"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tvEncoderY"
+                android:layout_column="0"
+                android:text="Encoder Y"
+                style="@style/txtView1"/>
+
+
+            <TextView
+                android:id="@+id/etY"
+                android:layout_column="1"
+                android:text="0"
+                style="@style/txtView2"/>
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tl6"
+        android:layout_width="585dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="false"
+        android:stretchColumns="1"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl5"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/tvEncoderZ"
+                android:layout_column="0"
+                android:text="Encoder Z"
+                style="@style/txtView1"/>
+
+            <TextView
+                android:id="@+id/etZ"
+                style="@style/txtView2"
+                android:layout_column="1"
+                android:text="0" />
+
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tl7"
+        android:layout_width="585dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="2dp"
+        android:stretchColumns="*"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl6"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+
+        <TableRow android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonEnable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="ENABLE CMD"
+                android:textSize="50sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl7"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:paddingRight="20dp">
+
+
+            <TableLayout
+                android:id="@+id/upper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:stretchColumns="*">
+
+
+                <TableRow>
+                    <Button
+                        android:id="@+id/btn1"
+                        android:layout_column="0"
+                        android:text="X+ Fast"
+                        style="@style/btn1"/>
+
+                    <Button
+                        android:id="@+id/btn2"
+                        style="@style/btn1"
+                        android:layout_column="1"
+                        android:text="X+ Slow" />
+
+                    <Button
+                        android:id="@+id/btn3"
+                        android:layout_column="2"
+                        android:text="X- Slow"
+                        style="@style/btn1"/>
+
+                    <Button
+                        android:id="@+id/btn4"
+                        android:layout_column="3"
+                        android:text="X- Fast"
+                        style="@style/btn1"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/btn5"
+                        android:layout_column="0"
+                        android:text="Y+ Fast"
+                        style="@style/btn1"/>
+
+                    <Button
+                        android:id="@+id/btn6"
+                        android:layout_column="1"
+                        android:text="Y+ Slow"
+                        style="@style/btn1"/>
+
+                    <Button
+                        android:id="@+id/btn7"
+                        android:layout_column="2"
+                        android:text="Y- Slow"
+                        style="@style/btn1"/>
+
+                    <Button
+                        android:id="@+id/btn8"
+                        android:layout_column="3"
+                        android:text="Y- Fast"
+                        style="@style/btn1"/>
+                </TableRow>
+
+                <TableRow>
+                    <Button
+                        android:id="@+id/btn9"
+                        android:layout_column="0"
+                        android:text="Z+ Fast"
+                        style="@style/btn1"/>
+
+                    <Button
+                        android:id="@+id/btn10"
+                        android:layout_column="1"
+                        android:text="Z+ Slow"
+                        style="@style/btn1"/>
+
+                    <Button
+                        android:id="@+id/btn11"
+                        android:layout_column="2"
+                        android:text="Z- Slow"
+                        style="@style/btn1"/>
+
+                    <Button
+                        android:id="@+id/btn12"
+                        android:layout_column="3"
+                        android:text="Z- Fast"
+                        style="@style/btn1"/>
+                </TableRow>
+
+                <TableRow android:padding="5dip" />
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/lower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="false"
+                android:stretchColumns="*"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upper"
+                tools:layout_constraintLeft_creator="1"
+                tools:layout_constraintTop_creator="1">
+
+                <TableRow>
+                    <Button
+                        android:id="@+id/btn13"
+                        android:layout_column="0"
+                        android:text="Centr UP"
+                        style="@style/btn1"/>
+
+                    <Button
+                        android:id="@+id/btn15"
+                        android:layout_column="2"
+                        android:text="OPen grip"
+                        style="@style/btn1"/>
+                </TableRow>
+
+                <TableRow>
+                    <Button
+                        android:id="@+id/btn14"
+                        android:layout_column="0"
+                        android:text="Centr DOWN"
+                        style="@style/btn1"/>
+
+                    <Button
+                        android:id="@+id/btn16"
+                        android:layout_column="2"
+                        android:text="Close grip"
+                        style="@style/btn1"/>
+
+
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:elegantTextHeight="false"
+                android:text="mod b"
+                android:visibility="invisible" />
+
+            <NumberPicker
+                android:id="@+id/numberPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="Mod U"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="mod d"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="mod f"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="state_statusW">585dp</dimen>
+    <dimen name="state_statusH">50dp</dimen>
+    <dimen name="sW">100dp</dimen>
+    <dimen name="sH">60dp</dimen>
+    <dimen name="btH">80dp</dimen>
+    <dimen name="textSize">20sp</dimen>
+    <dimen name="paddL">5dp</dimen>
+    <dimen name="paddL2">15dp</dimen>
+    <dimen name="paddR">30dp</dimen>
+</resources>
